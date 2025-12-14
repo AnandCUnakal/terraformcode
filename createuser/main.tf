@@ -16,5 +16,12 @@ provider "aws" {
 
 resource "aws_iam_user" "lb" {
   name = "pavitracu"
+  #force_destroy = false
+  #lifecycle {
+   # prevent_destroy = true
+  #}
 }
 
+output "username" {
+  value = aws_iam_user.lb.arn
+}
