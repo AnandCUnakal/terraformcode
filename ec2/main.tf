@@ -14,9 +14,9 @@ provider "aws" {
   region  = "us-east-2"
 }
 
-resource "aws_instance" "app_server" {
-  ami           = "ami-064ff912f78e3e561"
-  instance_type = "t2.micro"
+resource "aws_instance" "app_server_new"{
+  ami="ami-0f5fcdfbd140e4ab7"
+  instance_type="t2.micro"
 
   tags = {
     Name = "ExampleAppServerInstance"
